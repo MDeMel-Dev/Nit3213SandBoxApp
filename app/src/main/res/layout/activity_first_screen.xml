@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/first_button"
+        android:id="@+id/navigate_second_screen_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Navigate to second screen"
