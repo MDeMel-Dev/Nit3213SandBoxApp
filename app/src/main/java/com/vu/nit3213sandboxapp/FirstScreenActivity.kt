@@ -1,5 +1,6 @@
 package com.vu.nit3213sandboxapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -11,6 +12,9 @@ import androidx.core.view.WindowInsetsCompat
 class FirstScreenActivity : AppCompatActivity() {
 
     private lateinit var navigationButton: Button
+    private val secondScreenIntent by lazy {
+        Intent(this, SecondScreenActivity::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +27,12 @@ class FirstScreenActivity : AppCompatActivity() {
         super.onResume()
 
         navigationButton.setOnClickListener {
-            Log.d("Testlfc", "Button click")
+            insertNameToIntent("Nit3123")
+            startActivity(secondScreenIntent)
         }
+    }
+
+    fun insertNameToIntent(name: String) {
+        secondScreenIntent.putExtra("name", name)
     }
 }
