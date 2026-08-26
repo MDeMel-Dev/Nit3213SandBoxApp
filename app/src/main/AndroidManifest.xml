@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nit3213SandBoxApp">
         <activity
-            android:name=".SecondScreenActivity"
+            android:name=".ui.SecondScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".FirstScreenActivity"
+            android:name=".ui.FirstScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
