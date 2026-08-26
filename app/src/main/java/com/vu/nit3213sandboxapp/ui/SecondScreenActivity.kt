@@ -8,7 +8,9 @@ import com.vu.nit3213sandboxapp.R
 class SecondScreenActivity : AppCompatActivity() {
 
     private lateinit var greetingText: TextView
-    private val launchIntent = intent
+    private val launchIntent by lazy {
+        intent
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
