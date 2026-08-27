@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.vu.nit3213sandboxapp.R
+import com.vu.nit3213sandboxapp.data.Student
 
 class SecondScreenActivity : AppCompatActivity() {
 
@@ -22,7 +23,8 @@ class SecondScreenActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        val sharedName = launchIntent.getStringExtra("name")
+//        val sharedName = launchIntent.getStringExtra("name") // get a basic data type
+        val sharedName = launchIntent.getParcelableExtra<Student>("studentKey") // get a complex data type
         greetingText.text = getString(R.string.welcome_this_is_the_second_screen, sharedName)
     }
 }
