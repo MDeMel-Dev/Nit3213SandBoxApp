@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeScreenActivity">
+
+    <TextView
+        android:id="@+id/homeScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_screen_nit3213_sandbox"
+        android:textColor="#1976D2"
+        android:textFontWeight="500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeScreenTitle"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/s1NavigationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="session 1 - navigation"
+            tools:layout_editor_absoluteX="111dp"
+            tools:layout_editor_absoluteY="291dp" />
+
+        <Button
+            android:id="@+id/s2NavigationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="session 2 - layouts"
+            tools:layout_editor_absoluteX="111dp"
+            tools:layout_editor_absoluteY="291dp"
+            android:layout_marginTop="32dp"/>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
