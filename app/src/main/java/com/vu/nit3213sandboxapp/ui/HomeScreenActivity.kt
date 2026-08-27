@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.vu.nit3213sandboxapp.R
 import com.vu.nit3213sandboxapp.ui.sessionone.FirstScreenActivity
+import com.vu.nit3213sandboxapp.ui.sessiontwo.ConstraintLayoutExerciseActivity
 
 class HomeScreenActivity : AppCompatActivity() {
 
@@ -37,6 +38,10 @@ class HomeScreenActivity : AppCompatActivity() {
     fun setListeners() {
         sessionOneNavigationButton.setOnClickListener {
             startActivity((Intent(this, FirstScreenActivity::class.java)))
+        }
+
+        sessionTwoNavigationButton.setOnClickListener {
+            startActivity((Intent(this, ConstraintLayoutExerciseActivity::class.java)))
         }
     }
 }
