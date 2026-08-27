@@ -44,4 +44,6 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="welcome_this_is_the_second_screen">Welcome %1$s, This is the second screen</string>
+    <string name="home_screen_nit3213_sandbox">Home Screen ( Nit3213 Sandbox )</string>
+    <string name="cle_screen_title">Constraint Layout Exercise</string>
 </resources>

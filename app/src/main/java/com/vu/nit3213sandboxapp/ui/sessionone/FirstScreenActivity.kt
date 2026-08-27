@@ -1,4 +1,4 @@
-package com.vu.nit3213sandboxapp.ui
+package com.vu.nit3213sandboxapp.ui.sessionone
 
 import android.content.Intent
 import android.os.Bundle
