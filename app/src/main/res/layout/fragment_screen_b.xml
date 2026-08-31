@@ -4,26 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white">
+    tools:context=".ui.sessionfour.ScreenBFragment"
+    android:background="#FFA000">
+
 
     <TextView
-        android:id="@+id/firstScreenFragmentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="title text"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Screen B"
+        android:textColor="@color/black"
+        android:textFontWeight="500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="#0097A7"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/screenBNavigationButton"
+        android:id="@+id/screenCNavigationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:text="Navigate to Screen B"
-        android:backgroundTint="#FBC02D"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#388E3C"
+        android:gravity="center_horizontal"
+        android:text="Navigate to Screen C"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
