@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_screenBFragment_to_screenCFragment"
             app:destination="@id/screenCFragment" />
+        <argument
+            android:name="classDetails"
+            app:argType="com.vu.nit3213sandboxapp.data.ClassDetails" />
     </fragment>
     <fragment
         android:id="@+id/screenCFragment"
