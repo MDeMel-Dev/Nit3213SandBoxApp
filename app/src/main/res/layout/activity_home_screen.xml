@@ -45,6 +45,15 @@
             tools:layout_editor_absoluteY="291dp"
             android:layout_marginTop="32dp"/>
 
+        <Button
+            android:id="@+id/s3FragmentsNavigationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="session 4 - Fragments"
+            tools:layout_editor_absoluteX="111dp"
+            tools:layout_editor_absoluteY="291dp"
+            android:layout_marginTop="32dp"/>
+
 
     </LinearLayout>
 
