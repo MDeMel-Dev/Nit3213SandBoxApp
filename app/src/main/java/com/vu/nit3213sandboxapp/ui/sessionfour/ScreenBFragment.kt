@@ -6,12 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.vu.nit3213sandboxapp.R
+import com.vu.nit3213sandboxapp.data.ClassDetails
 
 class ScreenBFragment : Fragment() {
 
+    private val args : ScreenBFragmentArgs by navArgs()
     private lateinit var screenCNavigationButton: Button
+    private lateinit var screenText: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +35,8 @@ class ScreenBFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         screenCNavigationButton = view.findViewById<Button>(R.id.screenCNavigationButton)
+        screenText = view.findViewById(R.id.screenBText)
+        setClassDetails()
 
         setOnclickListeners()
     }
@@ -37,5 +45,9 @@ class ScreenBFragment : Fragment() {
         screenCNavigationButton.setOnClickListener {
             findNavController().navigate(R.id.action_screenBFragment_to_screenCFragment)
         }
+    }
+
+    private fun setClassDetails() {
+        screenText.text = args.classDetails.toString()
     }
 }

@@ -45,6 +45,14 @@ class FirstScreenFragment: Fragment() {
     }
 
     private fun setOnClickListeners() {
+        classNameTextField.doAfterTextChanged { text ->
+            firstScreenFragmentViewModel.className = text.toString()
+        }
+
+        classNumberTextField.doAfterTextChanged { text ->
+            firstScreenFragmentViewModel.classNumber = text.toString()
+        }
+
         screenBNavigationButton.setOnClickListener {
             try {
                 val classDetails = firstScreenFragmentViewModel.getClassDetails()
@@ -53,14 +61,6 @@ class FirstScreenFragment: Fragment() {
             } catch(e: Exception)  {
 
             }
-        }
-
-        classNameTextField.doAfterTextChanged { text ->
-            firstScreenFragmentViewModel.className = text.toString()
-        }
-
-        classNumberTextField.doAfterTextChanged { text ->
-            firstScreenFragmentViewModel.classNumber = text.toString()
         }
     }
 }
