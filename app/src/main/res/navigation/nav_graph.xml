@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstScreenFragment">
+
+    <fragment
+        android:id="@+id/firstScreenFragment"
+        android:name="com.vu.nit3213sandboxapp.ui.sessionfour.FirstScreenFragment"
+        android:label="FirstScreenFragment" >
+        <action
+            android:id="@+id/action_firstScreenFragment_to_screenBFragment"
+            app:destination="@id/screenBFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenBFragment"
+        android:name="com.vu.nit3213sandboxapp.ui.sessionfour.ScreenBFragment"
+        android:label="fragment_screen_b"
+        tools:layout="@layout/fragment_screen_b" >
+        <action
+            android:id="@+id/action_screenBFragment_to_screenCFragment"
+            app:destination="@id/screenCFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/screenCFragment"
+        android:name="com.vu.nit3213sandboxapp.ui.sessionfour.ScreenCFragment"
+        android:label="fragment_screen_c"
+        tools:layout="@layout/fragment_screen_c" />
+</navigation>
