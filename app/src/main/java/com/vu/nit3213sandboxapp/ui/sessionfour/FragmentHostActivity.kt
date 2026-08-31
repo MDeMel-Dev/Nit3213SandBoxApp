@@ -18,10 +18,5 @@ class FragmentHostActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        supportFragmentManager.beginTransaction()
-            .setReorderingAllowed(true)
-            .add(R.id.fragment_container_view, FirstScreenFragment::class.java, null)
-            .commit()
     }
 }
