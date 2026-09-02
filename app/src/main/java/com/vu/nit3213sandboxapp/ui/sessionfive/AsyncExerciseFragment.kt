@@ -18,7 +18,7 @@ class AsyncExerciseFragment : Fragment() {
         fun newInstance() = AsyncExerciseFragment()
     }
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: AsyncExerciseFragmentViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,10 +33,11 @@ class AsyncExerciseFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-
+        viewModel.updateTextWithDelay()
         lifecycleScope.launch {
-            delay(5000)
-            view?.findViewById<TextView>(R.id.exerciseText)?.text = "Hello Class!"
+            viewModel.labelText.collect { newText ->
+                view?.findViewById<TextView>(R.id.exerciseText)?.text = newText
+            }
         }
     }
 }
