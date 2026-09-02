@@ -31,4 +31,12 @@ class AsyncExerciseFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_async_exercise, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        lifecycleScope.launch {
+            delay(5000)
+            view?.findViewById<TextView>(R.id.exerciseText)?.text = "Hello Class!"
+        }
+    }
 }
