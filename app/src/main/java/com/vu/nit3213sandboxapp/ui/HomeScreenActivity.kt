@@ -11,6 +11,7 @@ import com.vu.nit3213sandboxapp.R
 import com.vu.nit3213sandboxapp.ui.sessionfive.AsyncExerciseActivity
 import com.vu.nit3213sandboxapp.ui.sessionfour.FragmentHostActivity
 import com.vu.nit3213sandboxapp.ui.sessionone.FirstScreenActivity
+import com.vu.nit3213sandboxapp.ui.sessionsix.RecyclerviewScreenActivity
 import com.vu.nit3213sandboxapp.ui.sessiontwo.ConstraintLayoutExerciseActivity
 
 class HomeScreenActivity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class HomeScreenActivity : AppCompatActivity() {
     private lateinit var sessionTwoNavigationButton: Button
     private lateinit var sessionThreeNavigationButton: Button
     private lateinit var sessionFiveNavigationButton: Button
+    private lateinit var sessionSixNavigationButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +41,7 @@ class HomeScreenActivity : AppCompatActivity() {
         sessionTwoNavigationButton = findViewById(R.id.s2NavigationButton)
         sessionThreeNavigationButton = findViewById(R.id.s3FragmentsNavigationButton)
         sessionFiveNavigationButton = findViewById(R.id.s5FragmentsNavigationButton)
+        sessionSixNavigationButton = findViewById(R.id.s6FragmentsNavigationButton)
     }
 
     fun setListeners() {
@@ -56,6 +59,10 @@ class HomeScreenActivity : AppCompatActivity() {
 
         sessionFiveNavigationButton.setOnClickListener {
             startActivity((Intent(this, AsyncExerciseActivity::class.java)))
+        }
+
+        sessionSixNavigationButton.setOnClickListener {
+            startActivity((Intent(this, RecyclerviewScreenActivity::class.java)))
         }
     }
 }
