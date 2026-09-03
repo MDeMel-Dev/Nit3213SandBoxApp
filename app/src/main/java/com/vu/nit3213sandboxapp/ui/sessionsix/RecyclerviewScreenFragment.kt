@@ -13,6 +13,11 @@ import kotlinx.coroutines.launch
 
 class RecyclerviewScreenFragment : Fragment() {
 
+    val recyclerView: RecyclerView? by lazy {
+        view?.findViewById(R.id.phoneListRecyclerView)
+    }
+    private lateinit var adapter: PhoneListAdapter
+
     companion object {
         fun newInstance() = RecyclerviewScreenFragment()
     }
@@ -22,6 +27,11 @@ class RecyclerviewScreenFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        adapter = PhoneListAdapter()
+
+        lifecycleScope.launch {
+            viewModel.getPhoneListData()
+        }
     }
 
     override fun onCreateView(
@@ -31,5 +41,15 @@ class RecyclerviewScreenFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_recyclerview_screen, container, false)
 
         return view
+    }
+
+    override fun onResume() {
+        super.onResume()
+        lifecycleScope.launch {
+            viewModel.phoneList.collect { phoneList ->
+                adapter.setData(phoneList)
+                recyclerView?.adapter = adapter
+            }
+        }
     }
 }
