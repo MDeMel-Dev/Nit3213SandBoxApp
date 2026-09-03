@@ -4,9 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.vu.nit3213sandboxapp.R
+import com.vu.nit3213sandboxapp.data.PhoneDetails
 import com.vu.nit3213sandboxapp.network.data.Phone
 
-class PhoneListAdapter(private val dataList: MutableList<Phone> = mutableListOf<Phone>()) : RecyclerView.Adapter<PhoneListItemViewHolder>() {
+class PhoneListAdapter(private val dataList: MutableList<Phone> = mutableListOf<Phone>(), val onClickFunction: (PhoneDetails) -> Unit) : RecyclerView.Adapter<PhoneListItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhoneListItemViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
@@ -18,7 +19,7 @@ class PhoneListAdapter(private val dataList: MutableList<Phone> = mutableListOf<
     }
 
     override fun onBindViewHolder(holder: PhoneListItemViewHolder, position: Int) {
-        holder.bind(dataList[position])
+        holder.bind(dataList[position], onClickFunction)
     }
 
     override fun getItemCount() = dataList.size
